@@ -1,145 +1,119 @@
 # 🛡️ Phishing Email Detection System
 
-## 📌 Project Overview
-This project is a **Machine Learning–based web application** designed to detect whether an email is **Phishing or Legitimate** by analyzing email content using **Natural Language Processing (NLP)** techniques.
+A **Machine Learning–based web application** that detects whether an email is **Phishing** or **Legitimate**. The system analyzes email content, URLs, and attachments using **Natural Language Processing (NLP)** and machine learning models, helping users identify phishing attacks in real time.
+---
 
-Phishing is one of the most common cybersecurity threats where attackers send fraudulent emails to trick users into revealing sensitive information such as passwords, banking details, or personal data.
-
-The system analyzes email text and classifies it as:
-* ✔ **Legitimate Email**
-* ❌ **Phishing Email**
-
-The application integrates a **trained machine learning model** with a **Flask web application** to provide real-time phishing detection.
-
+## 📊 Project Overview
+The Phishing Email Detection System demonstrates how AI can improve email security. Users can analyze suspicious links, check attachments, and receive predictions about emails to reduce the risk of phishing attacks.
 ---
 
 ## 🛠 Tools & Technologies
-
-### Backend
-* **Python**
-* **Flask**
-* **Scikit-learn**
-* **Pandas**
-* **NumPy**
-
-### Frontend
-* **HTML**
-* **CSS**
-* **JavaScript**
-
-### Database
-* **SQLite**
-
-### Machine Learning
-* **Natural Language Processing (NLP)**
-* **Text Feature Extraction**
-* **Classification Model**
+- **Python** – Backend programming & ML model development  
+- **Flask** – Web application framework  
+- **Scikit-learn** – Machine learning model creation  
+- **Pandas & NumPy** – Data preprocessing & manipulation  
+- **SQLite** – Database management for logs and users  
+- **HTML, CSS, JavaScript** – Frontend interface  
+- **NLP Techniques** – Email text preprocessing & feature extraction  
 
 ---
 
-## ✨ Key Features
-* **User Authentication System** (Login & Signup)
-* **Email Phishing Detection** using Machine Learning
-* **Email Content Analysis** using NLP techniques
-* **Prediction Results** displayed with clear classification
-* **Email Analysis Logs** to track previous detections
-* **Model Retraining Functionality**
-* **Simple and User-Friendly Web Interface**
+## 📂 Dataset
+
+The dataset contains emails labeled as **Phishing** or **Legitimate**, including:  
+- **Email Content** (text)  
+- **URLs** contained in emails  
+- **Attachments**  
+- **Email Labels** (Phishing / Legitimate)  
 
 ---
 
-## 🧠 Machine Learning Workflow
-The system follows a structured workflow to detect phishing emails:
-
-### Email Input
-* User enters the email text into the system for analysis.
-
-### Text Preprocessing
-* The email content is cleaned and processed using NLP techniques.
-
-### Feature Extraction
-* Important features are extracted using a feature engineering model.
-
-### Model Prediction
-* The trained machine learning model analyzes the extracted features.
-
-### Result Display
-* The system predicts whether the email is **phishing or legitimate** and displays the result on the dashboard.
+## 🔎 Machine Learning Workflow
+1. **Email Input** – User enters email text (optionally URLs or attachments).  
+2. **Text Preprocessing** – Emails are cleaned using NLP techniques.  
+3. **Feature Extraction** – Important features are extracted from text, URLs, and attachments.  
+4. **Model Prediction** – The trained ML model predicts whether the email is phishing or legitimate.  
+5. **Result Display** – Dashboard shows the prediction and details about suspicious links or attachments.  
 
 ---
 
-## ⚙️ Installation
-### Clone the Repository
+## 📈 Key Features
+- ✅ User Authentication (Login & Signup)  
+- ✅ Phishing Detection via ML  
+- ✅ URL Analysis to detect malicious links  
+- ✅ Attachment Analysis to check for harmful files  
+- ✅ Prediction results displayed clearly on the dashboard  
+- ✅ Logs to track previous email analyses  
+- ✅ Model Retraining for improved accuracy  
+- ✅ Simple, user-friendly web interface  
+
+---
+
+## 🎯 Key Insights
+- Phishing emails often contain **urgent or threatening language**.  
+- **Suspicious URLs and attachments** are strong indicators of phishing.  
+- The system **improves cybersecurity awareness** and reduces risk of attacks.  
+- Model accuracy improves with **regular retraining** on new email datasets.  
+
+---
+
+## 🚀 How to Run This Project
+
+### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/Vasantlohar0504/phishing-email-detection.git
 cd phishing-email-detection
-```
+````
 
-### Create Virtual Environment
+### 2️⃣ Create a Virtual Environment
 ```bash
 python -m venv venv
 ```
 
-Activate the environment:
 **Windows**
-```
+```bash
 venv\Scripts\activate
 ```
 
 **Mac / Linux**
-```
+```bash
 source venv/bin/activate
 ```
-### Install Dependencies
-```
+
+### 3️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
 ```
 
----
-
-## ▶️ Run the Application
-Start the Flask server:
-```
+### 4️⃣ Start Flask Server
+```bash
 python app.py
 ```
-
-Open your browser and visit:
-```
-http://127.0.0.1:5000
-```
-
+Open your browser and visit: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 ---
 
 ## 📊 Example Usage
-### Input Email
 
-```
-Dear user,
-Your account has been suspended.
-Click here to verify your account immediately.
-```
+**Input Email:**
+> Dear user,
+> Your account has been suspended. Click here to verify your account immediately.
 
-### Prediction Result
+**Prediction Result:**
+⚠️ **Phishing Email Detected**
 
-```
-⚠️ Phishing Email Detected
-```
+**URLs & Attachments Checked:**
+* Suspicious link detected
+* Attachment safe
 
 ---
 
-## 🚀 Project Outcome
-This project demonstrates how **Machine Learning and NLP techniques** can be used to improve email security by automatically identifying phishing emails.
-
-The system helps users:
-* Detect suspicious emails
-* Improve cybersecurity awareness
-* Prevent phishing attacks
-* Analyze email content efficiently
-
-
-
 ## 👨‍💻 Author
-**Vasant Lohar**
-Data Analyst | Data Science Enthusiast
+**Vasant Lohar** – Data Analyst | Data Science Enthusiast
+[GitHub Profile](https://github.com/Vasantlohar0504)
 
-If you want, I can also show you **one small trick used by top GitHub portfolios** that will make this project look **2× more professional to recruiters** (takes only **2 minutes to add**).
+---
+
+## 📄 License
+This project is licensed under the [MIT License](LICENSE) – feel free to use and modify it.
+
+```
