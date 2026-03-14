@@ -1,4 +1,10 @@
 # 🛡️ Phishing Email Detection System
+---
+
+## 📄 License
+This project is licensed under the [MIT License](LICENSE) – feel free to use and modify it.
+
+```
 
 A **Machine Learning–based web application** that detects whether an email is **Phishing** or **Legitimate**. The system analyzes email content, URLs, and attachments using **Natural Language Processing (NLP)** and machine learning models, helping users identify phishing attacks in real time.
 ---
@@ -111,9 +117,4 @@ Open your browser and visit: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 **Vasant Lohar** – Data Analyst | Data Science Enthusiast
 [GitHub Profile](https://github.com/Vasantlohar0504)
 
----
 
-## 📄 License
-This project is licensed under the [MIT License](LICENSE) – feel free to use and modify it.
-
-```
