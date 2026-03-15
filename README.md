@@ -17,9 +17,13 @@ The system analyzes **email content, URLs, and attachments** using **Natural Lan
 The **Phishing Email Detection System** demonstrates how **Artificial Intelligence and Machine Learning** can enhance cybersecurity by identifying malicious emails.
 
 The system allows users to:
+
 ✔ Analyze suspicious emails
+
 ✔ Detect phishing links and malicious attachments
+
 ✔ Get real-time ML predictions
+
 ✔ Track previously analyzed emails
 
 This project highlights the use of **AI for cybersecurity applications**.
