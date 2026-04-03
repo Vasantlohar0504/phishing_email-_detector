@@ -1,12 +1,17 @@
 
 # 🛡️ Phishing Email Detection System
 
-![Python](https://img.shields.io/badge/Python-Backend-blue)
+![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
+![Machine Learning](https://img.shields.io/badge/ML-Scikit--Learn-orange)
 ![NLP](https://img.shields.io/badge/NLP-Text%20Processing-green)
+![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey)
+![Pandas](https://img.shields.io/badge/Data-Pandas-yellow)
+![ReportLab](https://img.shields.io/badge/PDF-ReportLab-red)
+![OAuth](https://img.shields.io/badge/Auth-Google%20OAuth-blue)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Maintenance](https://img.shields.io/badge/Maintained-Yes-green)
 ![License](https://img.shields.io/badge/License-MIT-green)
-
 
 > A full-stack **Flask-based cybersecurity application** that detects phishing emails using Machine Learning, provides detailed analysis, and generates professional PDF reports with verification.
 
