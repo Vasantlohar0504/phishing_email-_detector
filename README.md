@@ -7,169 +7,265 @@
 ![NLP](https://img.shields.io/badge/NLP-Text%20Processing-green)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-A **Machine Learning–powered web application** that detects whether an email is **Phishing** or **Legitimate**.
-The system analyzes **email content, URLs, and attachments** using **Natural Language Processing (NLP)** and machine learning models to help users identify phishing attacks and improve email security.
+
+> A full-stack **Flask-based cybersecurity application** that detects phishing emails using Machine Learning, provides detailed analysis, and generates professional PDF reports with verification.
 
 ---
 
-# 📊 Project Overview
+## 🚀 Overview
 
-The **Phishing Email Detection System** demonstrates how **Artificial Intelligence and Machine Learning** can enhance cybersecurity by identifying malicious emails.
+This project is an intelligent **email security system** designed to identify phishing attempts by analyzing email content, URLs, and attachments.
 
-The system allows users to:
+It combines:
 
-✔ Analyze suspicious emails
-
-✔ Detect phishing links and malicious attachments
-
-✔ Get real-time ML predictions
-
-✔ Track previously analyzed emails
-
-This project highlights the use of **AI for cybersecurity applications**.
+* 🧠 Machine Learning
+* 🌐 Web Application (Flask)
+* 📊 Data Storage & Retraining
+* 📄 Automated Report Generation
 
 ---
 
-# 🛠 Tools & Technologies
-| Technology                | Purpose                                         |
-| ------------------------- | ----------------------------------------------- |
-| **Python**                | Backend programming & ML model development      |
-| **Flask**                 | Web application framework                       |
-| **Scikit-learn**          | Machine learning model training                 |
-| **Pandas & NumPy**        | Data preprocessing & analysis                   |
-| **SQLite**                | Database for storing logs and users             |
-| **HTML, CSS, JavaScript** | Frontend user interface                         |
-| **NLP Techniques**        | Email text preprocessing and feature extraction |
-| **GitHub**                | Version control and project hosting             |
+## ✨ Features
+
+### 🔐 Authentication System
+
+* User Signup & Login
+* Secure password hashing
+* Google OAuth login integration
+* Role-based access (Admin / User)
+* Auto-generated avatars
 
 ---
 
-# 📂 Dataset
+### 🧠 Email Analysis
 
-The dataset used in this project contains labeled emails used to train the phishing detection model.
+* Detects **Phishing vs Legitimate Emails**
+* Extracts:
 
-### Dataset Features
-* **Email Content (Text)**
-* **URLs contained in emails**
-* **Attachments**
-* **Email Labels**
-  * Phishing
-  * Legitimate
+  * Sender domain
+  * URLs from content
+  * Attachments
+* Provides:
 
-This dataset helps train the model to recognize **patterns commonly used in phishing attacks**.
-
----
-
-# 🔎 Machine Learning Workflow
-
-The system follows this workflow to detect phishing emails:
-
-1️⃣ **Email Input**
-User enters email content, URLs, or attachments.
-
-2️⃣ **Text Preprocessing**
-Email text is cleaned using NLP techniques such as:
-* Stopword removal
-* Tokenization
-* Text normalization
-
-3️⃣ **Feature Extraction**
-Important features are extracted from:
-* Email text
-* URLs
-* Attachments
-
-4️⃣ **Model Prediction**
-The trained ML model predicts whether the email is:
-* **Phishing**
-* **Legitimate**
-
-5️⃣ **Result Display**
-Prediction results are displayed on the dashboard with detected suspicious elements.
+  * Confidence score
+  * AI-based explanation
 
 ---
 
-# 📈 Key Features
-* 🔐 **User Authentication** (Login & Signup)
-* 🤖 **Machine Learning–based phishing detection**
-* 🔗 **URL Analysis** for detecting malicious links
-* 📎 **Attachment Analysis** for harmful files
-* 📊 **Prediction Dashboard** showing analysis results
-* 🗂 **Email Analysis Logs**
-* 🔄 **Model Retraining Support**
-* 🎨 **Simple and User-Friendly Interface**
+### 📊 Data Handling
+
+* Stores results in:
+
+  * SQLite Database
+  * CSV dataset (`email_data.csv`)
+* Automatic dataset update
+* Model auto-retraining after analysis
 
 ---
 
-# 🎯 Key Insights
+### 📄 PDF Report Generation
 
-From the analysis of phishing emails:
-* Phishing emails frequently contain **urgent or threatening language**.
-* **Suspicious URLs and attachments** are strong phishing indicators.
-* Machine learning helps **automate phishing detection** efficiently.
-* Model accuracy improves with **continuous retraining on new data**.
+* Professional report with:
+
+  * Report ID & timestamp
+  * Detection result & risk level
+  * Email details & URLs
+  * Full email content
+  * AI explanation
+  * QR Code verification
+* Watermark & styled layout
 
 ---
 
-# 🚀 How to Run This Project
-## 1️⃣ Clone the Repository
+### 👨‍💼 Admin Dashboard
 
-```bash
-git clone https://github.com/Vasantlohar0504/phishing-email-detection.git
-cd phishing-email-detection
+* View all users
+* Manage roles
+* Monitor analyzed emails
+* Delete users/emails (single & bulk)
+
+---
+
+## 🛠️ Tech Stack
+
+| Category         | Technology                   |
+| ---------------- | ---------------------------- |
+| Backend          | Flask (Python)               |
+| Frontend         | HTML, CSS, Jinja2            |
+| Database         | SQLite                       |
+| Machine Learning | Scikit-learn (Pickle Model)  |
+| PDF Engine       | ReportLab                    |
+| Image Processing | Pillow (PIL)                 |
+| Data Processing  | Pandas                       |
+| Authentication   | Flask Session + Google OAuth |
+
+---
+
+## 📁 Project Structure
+
+```id="proj-struct"
+app/
+│
+├── models/
+│   ├── user.py
+│   └── email.py
+│
+├── routes/
+│   ├── auth.py        # Authentication & Google Login
+│   ├── main.py        # Core logic (analysis, PDF, admin)
+│   ├── admin.py
+│   └── analysis.py
+│
+├── services/
+│   └── ml_service.py  # ML prediction & retraining
+│
+├── utils/
+│
+├── static/
+│   ├── images/
+│   └── assets/
+│
+├── templates/
+│   ├── admin/
+│   │   └── dashboard.html
+│   ├── login.html
+│   ├── signup.html
+│   ├── index.html
+│   ├── results.html
+│   └── ...
+│
+├── extensions.py
+└── __init__.py
+│
+├── config.py
+├── run.py
+├── requirements.txt
+├── model_bundle.pkl
+├── email_data.csv
+└── database.db
 ```
 
 ---
 
-## 2️⃣ Create Virtual Environment
+## ⚙️ Installation
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-username/phishing-email-detector.git
+cd phishing-email-detector
+```
+
+---
+
+### 2️⃣ Setup Virtual Environment
+
 ```bash
 python -m venv venv
 ```
-### Activate Environment
-**Windows**
+
+Activate:
+
 ```bash
+# Windows
 venv\Scripts\activate
-```
-**Mac / Linux**
-```bash
+
+# Linux / Mac
 source venv/bin/activate
 ```
+
 ---
-## 3️⃣ Install Dependencies
+
+### 3️⃣ Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
+
 ---
-## 4️⃣ Run the Flask Application
+
+### 4️⃣ Run Application
+
 ```bash
-python app.py
+python run.py
 ```
-Open your browser and visit:
-```
-http://127.0.0.1:5000
-```
+
 ---
 
-# 📊 Example Usage
-### Input Email
-> Dear user,
-> Your account has been suspended. Click the link below to verify your account immediately.
+### 🌐 Open in Browser
 
-### Prediction Result
-⚠️ **Phishing Email Detected**
-
-### Analysis
-* Suspicious URL detected
-* Attachment status: Safe
----
-
-# 📜 License
-
-This project is licensed under the **MIT License**.
-
-You are free to **use, modify, and distribute** this project.
+```
+http://127.0.0.1:5000/
+```
 
 ---
+
+## 🧪 Usage Flow
+
+1. Login / Signup
+2. Enter email details:
+
+   * Email address
+   * Email body
+   * URLs (optional)
+   * Attachment (optional)
+3. Click **Analyze**
+4. View:
+
+   * Detection result
+   * Confidence score
+   * Risk level
+5. Download PDF report
+
+---
+
+## 🤖 Machine Learning Pipeline
+
+* Model loaded from: `model_bundle.pkl`
+* Core functions:
+
+  * `ml_service.predict(text)`
+  * `ml_service.explain_prediction(text)`
+* Features used:
+
+  * Email content
+  * Domain
+  * URLs
+  * Attachments
+* Continuous learning:
+
+  * New data appended to CSV
+  * Auto retraining triggered
+
+---
+
+## 🔐 Security Features
+
+* Password hashing (`werkzeug.security`)
+* Session-based authentication
+* Role-based access control
+* Admin route protection
+* Input validation & sanitization
+
+---
+
+
+## 📈 Future Enhancements
+
+* 🚀 REST API for external integration
+* ☁️ Cloud deployment (AWS / Render)
+* 📊 Advanced analytics dashboard
+* 🔐 JWT authentication
+* ⚡ Async ML processing
+* 📧 Real-time email scanning
+
+---
+
+
+
+## 📜 License
+
+This project is licensed under the MIT License.
 
 # 👨‍💻 Author
 
