@@ -152,7 +152,7 @@ app/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/phishing-email-detector.git
+git clone https://github.com/Vasantlohar0504/phishing-email-detector.git
 cd phishing-email-detector
 ```
 
